@@ -25,12 +25,14 @@ ex: la pomme est rouge et la banane est jaune
  */
 
 const countWords = (sentence) => {
+  if (sentence === '') return {}
   let words = sentence.split(' ')
   let dict = {}
   words.reduce((_, value) => dict[value] = dict[value] ? ++dict[value] : 1, new Map())
   return dict
 };
 console.log(countWords("la pomme est rouge et la banane est jaune"));
+console.log(countWords(""));
 
 /**
 Exercice : Trier un objet par valeur
