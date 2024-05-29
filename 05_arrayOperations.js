@@ -25,7 +25,7 @@ console.log('multiplyByTwo([1, 2, 3]): ', multiplyByTwo([1, 2, 3]))
   */
 
 const filterNameStartByA = (array) => array.filter(v => v.startsWith('A'))
-console.log("multiplyByTwo(['A', 'B', 'C']): ", multiplyByTwo(['A', 'B', 'C']))
+console.log("filterNameStartByA(['A', 'B', 'C']): ", filterNameStartByA(['A', 'B', 'C']))
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -38,7 +38,7 @@ console.log("multiplyByTwo(['A', 'B', 'C']): ", multiplyByTwo(['A', 'B', 'C']))
   */
 
 const sum = (array) => array.reduce((count, next_value) => count += next_value)
-console.log("sum([1, 2, 3]): ", multiplyByTwo([1, 2, 3]))
+console.log("sum([1, 2, 3]): ", sum([1, 2, 3]))
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre

@@ -7,7 +7,7 @@
  *   - le mot clée "function" est interdis
  */
 
-let arrow1 = (num) => { num + 1 }
+let arrow1 = (num) => { return num + 1 }
 console.log('arrow1(1): ', arrow1(1))
 
 /**

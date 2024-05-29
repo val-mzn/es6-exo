@@ -8,7 +8,7 @@
  *  - for, foreach, while, do while sont interdits
  */
 
-const concat = (arr1, arr2) => {Object.assign(arr1, arr2)}
+const concat = (arr1, arr2) => {return arr1 + arr2}
 console.log('concat([1, 2, 3], [4, 5, 6])', concat([1, 2, 3], [4, 5, 6]))
 
 /**
@@ -29,7 +29,8 @@ console.log('push([1, 2, 3], 4)', push([1, 2, 3], 4))
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
 
-const merge = (obj1, obj2) => {}
+const merge = (obj1, obj2) => {Object.assign(obj1, obj2)}
+console.log('merge({a: 1, b: 2}, {c: 3, d: 4})', merge({a: 1, b: 2}, {c: 3, d: 4}))
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
