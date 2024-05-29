@@ -37,9 +37,9 @@ console.log("filterNameStartByA(['A', 'B', 'C']): ", filterNameStartByA(['A', 'B
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const sum = (array) => array.reduce((count, next_value) => count += next_value)
+const sum = (array) => array.reduce((count, next_value) => count += next_value, 0)
 console.log("sum([1, 2, 3]): ", sum([1, 2, 3]))
-
+console.log("sum([])", sum([]))
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
  * retourne l'utilisateur qui a l'id passé en 2e paramètre
