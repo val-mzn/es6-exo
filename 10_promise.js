@@ -5,6 +5,6 @@
  * utilisez new Promise
  */
 
-const sleep = async () => await delay(2000);
+const sleep = async () => new Promise(res => setTimeout(res, 2000));
 
 module.exports = {sleep};
