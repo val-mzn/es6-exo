@@ -1,4 +1,4 @@
-//const {sleep} = require("../exercices/10_promise");
+const {sleep} = require("../exercices/10_promise");
 
 /**
  * Créez une fonction synchrone qui attend 2 seconde puis execute le callback passé en paramètre
@@ -12,6 +12,7 @@
  * 
  */
 const usingThen = (cb) => {
+    sleep().then(cb)
 }
 
 /**
@@ -25,8 +26,8 @@ const usingThen = (cb) => {
  *   - ne pas utiliser .then
  */
 
-const usingAwait = (cb) => {
-
+const usingAwait = async (cb) => {
+    return sleep().then(cb)
 }
 
 /**
