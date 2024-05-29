@@ -1,4 +1,5 @@
-const {sleep} = require("../exercices/10_promise");
+const {sleep} = require('./10_promise')
+const axios = require('axios');
 
 /**
  * Créez une fonction synchrone qui attend 2 seconde puis execute le callback passé en paramètre
@@ -11,10 +12,10 @@ const {sleep} = require("../exercices/10_promise");
  *    - ne pas utiliser async await
  * 
  */
-const usingThen = (cb) => {
-    sleep().then(cb)
-}
+const usingThen = (cb) => sleep().then(cb)
 
+const foo = () => {}
+console.log('usingThen(foo): ', usingThen(foo))
 /**
  * Créez une fonction asynchrone qui attend 2 seconde puis execute le callback passé en paramètre
  * vous pouvez utiliser la fonction sleep créé précedement: const {sleep} = require("../exercices/10_promise");
@@ -27,9 +28,10 @@ const usingThen = (cb) => {
  */
 
 const usingAwait = async (cb) => {
-    return sleep().then(cb)
+    await sleep()
+    return cb()
 }
-
+console.log('usingAwait(foo): ', usingAwait(foo))
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
  * retourne le résultat de la requête (body)
@@ -46,7 +48,10 @@ const usingAwait = async (cb) => {
 //const axios = require("axios");
 
 const apiResponse = async (url) => {
-
+    axios.get(url)
+    .then(function (response) {
+        return response
+    })
 }
 
 
