@@ -12,7 +12,10 @@
  *  - interdiction d'utiliser slice ou splice
  */
 
-const extractFirstTwo = (array) => [array.shift(), array.shift()]
+const extractFirstTwo = (array) => {
+    let [first, second, ...rest] = array
+    return [first, second]
+}
 console.log('extractFirstTwo(array): ', extractFirstTwo([1, 2, 3]))
 
 /**
@@ -22,7 +25,10 @@ console.log('extractFirstTwo(array): ', extractFirstTwo([1, 2, 3]))
  * exemple: [1, 2, 3] => [2, 3]
  */
 
-const extractRest = (array) => [array.pop(), array.pop()]
+const extractRest = (array) => {
+    let [_, ...rest] = array
+    return [rest]
+}
 console.log('extractRest(array): ', extractRest([1, 2, 3]))
 
 /**

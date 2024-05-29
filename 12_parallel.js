@@ -23,5 +23,5 @@ const parallel = () => {
     ]
     return Promise.all([...promises]).then((results) => results)
 }
-
+console.log('parallel(): ', parallel())
 module.exports = {parallel};
