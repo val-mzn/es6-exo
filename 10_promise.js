@@ -5,8 +5,8 @@
  * utilisez new Promise
  */
 
-const sleep = () => {
-
+const sleep = async () => {
+    await delay(2000);
 };
 
 module.exports = {sleep};
