@@ -27,7 +27,7 @@ console.log('extractFirstTwo(array): ', extractFirstTwo([1, 2, 3]))
 
 const extractRest = (array) => {
     let [_, ...rest] = array
-    return [rest]
+    return rest
 }
 console.log('extractRest(array): ', extractRest([1, 2, 3]))
 
